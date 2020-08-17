@@ -8,18 +8,7 @@ inventarliste = []
 #gegenstand zuum Inventar hinzufügen
 def inventaradd(a):           #funktion mit parameter
     inventarliste.append(a) #Parameter kommt in die Inventarliste
-
 inventaradd("Monatskarte")     #Argument Monatskarte wird als parameter der funktion inventar+ eigesetzt und kommt so in die liste
-inventaradd("Gewehr")
-inventaradd("1 münze")
-inventaradd("handy")
-inventaradd("lautsprecher")
-inventaradd("akten")
-inventaradd("steuererklärung")
-inventaradd("laptop")
-inventaradd("brief")
-inventaradd("flasche")
-
 
 #spieler ruft inventar auf
 def inventarrecall():
@@ -29,21 +18,6 @@ def inventarrecall():
 
 
 #Spiel Start----------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-#Versuch Inventarliste
-window = Tk()
-Label(window, text="Inventar", font="none 30 bold") .grid(row=0, column=0, sticky=W)
-for i in range(len(inventarliste)):
-    Label(window, text=inventarliste[i], font="none 10 bold") .grid(row=i+1, column=0, sticky=W)
-
-
-
-
-
-
-
-
 
 #Namenswahl
 name = input("Was ist dein Name: ")
