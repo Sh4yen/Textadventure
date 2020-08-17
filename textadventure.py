@@ -41,10 +41,6 @@ for i in range(len(inventarliste)):
 
 
 
-
-
-
-
 #Namenswahl
 name = input("Was ist dein Name: ")
 spiel = 1
