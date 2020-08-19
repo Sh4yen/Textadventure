@@ -1,6 +1,45 @@
 #Bibiloteken importieren
 from tkinter import * 
 
+#Entscheidungen
+def entscheidung(a,b,c,d,e,f):
+    print(a)
+    if b == "-":
+        pass
+    else: 
+        print("1. ", b)
+    if c == "-":
+        pass
+    else:
+        print("2. ", c)
+    if d == "-":
+        pass
+    else:
+        print("3. ", d)
+    if e == "-":
+        pass
+    else:
+        print("4. ", e)
+    if f == "-":
+        pass
+    else:
+        print("5. ", f)
+    
+    auswahl = int(input())
+    if auswahl == 1 or auswahl == "b":
+        return 1
+    elif auswahl == 2 or auswahl == "c":
+        return 2
+    elif auswahl == 3 or auswahl == "d":
+        return 3
+    elif auswahl == 4 or auswahl == "e":
+        return 4
+    elif auswahl == 5 or auswahl == "f":
+        return 5
+    else:
+        pass
+ergebniss = entscheidung("Was kannst du", "Nichts", "Viel", "-", "Fußball", "Koks und Nutten")
+print(ergebniss)
 
 #Inventar
 inventarliste = []
@@ -10,15 +49,7 @@ def inventaradd(a):           #funktion mit parameter
     inventarliste.append(a) #Parameter kommt in die Inventarliste
 
 inventaradd("Monatskarte")     #Argument Monatskarte wird als parameter der funktion inventar+ eigesetzt und kommt so in die liste
-inventaradd("Gewehr")
-inventaradd("1 münze")
-inventaradd("handy")
-inventaradd("lautsprecher")
-inventaradd("akten")
-inventaradd("steuererklärung")
-inventaradd("laptop")
-inventaradd("brief")
-inventaradd("flasche")
+
 
 
 #spieler ruft inventar auf
@@ -36,12 +67,6 @@ window = Tk()
 Label(window, text="Inventar", font="none 30 bold") .grid(row=0, column=0, sticky=W)
 for i in range(len(inventarliste)):
     Label(window, text=inventarliste[i], font="none 10 bold") .grid(row=i+1, column=0, sticky=W)
-
-
-
-
-
-
 
 
 
@@ -73,5 +98,7 @@ Ich denke Kennedyland und Kaliskya sind ihre einzigen Optionen. Außer sie wolle
         print("Ok, setzen sie sich.")
     elif e_reiseziel == 3 :
         print("Alles klar, wenn sie meinen dass ise das hinbekommen...setzen sie sich doch.")
+
+
 
 
