@@ -13,9 +13,9 @@ def inventaradd(a):           #funktion mit parameter
 inventaradd("Monatskarte")     #Argument Monatskarte wird als parameter der funktion inventar+ eigesetzt und kommt so in die liste
 
 
-def entscheidung(a,b,c,d,e,f):
+def entscheidung(a,b,c,d,e,f):  #funktion Entscheidung. Parameter a = Text/Frage. Parameter b,c,d,e,f = Antwortmöglichkeiten
     print(a)
-    if b == "-":
+    if b == "-":                #wenn für einen Parameter das Argument - (Bindestrich) gegeben wird, so wird dieser ignorirt
         pass
     else: 
         print("1. ", b)
@@ -37,7 +37,7 @@ def entscheidung(a,b,c,d,e,f):
         print("5. ", f)
     
     auswahl = str(input())
-    if auswahl == "1" or auswahl == "b":
+    if auswahl == "1" or auswahl == "b":    #wenn 1 gewält wird gibt die funktion 1 aus u.s.w.
         return 1
     elif auswahl == "2" or auswahl == "c":
         return 2
@@ -48,13 +48,27 @@ def entscheidung(a,b,c,d,e,f):
     elif auswahl == "5" or auswahl == "f":
         return 5
     else:
-        for i in range(len(inventarliste)):
-            if auswahl == inventarliste[i]:
+        for i in range(len(inventarliste)): #eine Zahl i steht bei null und wiederholt die for funktion bis sie bei der länge der list angelangt, jedes mal wird sie um 1 addiert
+            if auswahl == inventarliste[i]: #stimmt das eingegebene wor mit einem Listenelement überein so wird der print befehl ausgeführt und die funktion gibt den Namen des elements aus
                 print("Du verwendest " + inventarliste[i])
                 return inventarliste[i]
             else:
-                pass
-ergebniss = entscheidung("Was kannst du", "Nichts", "Viel", "-", "Fußball", "Koks und Nutten")
+                return 0    #gibt die Funktion 6 aus wurde keine Valide eingabe gemacht
+
+
+ergebniss = 1
+while ergebniss == 1 :
+    entscheidung("Hallo, um an bord zu kommen benötigen sie leider eine Karte haben sie eine? \n(Tipp: du kannst dinge aus deinem Inventar nutzen indem du ihren Namen schreibst.", "Nein Leider nicht.", "Wo bin ich hier?", "-", "-", "-")
+     if entscheidung == "Monatskarte":
+        print("Toll")
+   
+    #Warum steht hier ergebnis = entscheidung 
+    #wenn ich nicht das richtige eingebe komme ich trozdem weiter??!
+    #die funktion muss loopen wenn eine ungültige antwort gegeben wird.
+ 
+        
+    
+
 
 
 
