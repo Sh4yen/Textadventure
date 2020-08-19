@@ -2,6 +2,17 @@
 from tkinter import * 
 
 #Entscheidungen
+#Inventar
+inventarliste = []
+
+
+#gegenstand zuum Inventar hinzufügen
+def inventaradd(a):           #funktion mit parameter
+    inventarliste.append(a) #Parameter kommt in die Inventarliste
+
+inventaradd("Monatskarte")     #Argument Monatskarte wird als parameter der funktion inventar+ eigesetzt und kommt so in die liste
+
+
 def entscheidung(a,b,c,d,e,f):
     print(a)
     if b == "-":
@@ -25,30 +36,27 @@ def entscheidung(a,b,c,d,e,f):
     else:
         print("5. ", f)
     
-    auswahl = int(input())
-    if auswahl == 1 or auswahl == "b":
+    auswahl = str(input())
+    if auswahl == "1" or auswahl == "b":
         return 1
-    elif auswahl == 2 or auswahl == "c":
+    elif auswahl == "2" or auswahl == "c":
         return 2
-    elif auswahl == 3 or auswahl == "d":
+    elif auswahl == "3" or auswahl == "d":
         return 3
-    elif auswahl == 4 or auswahl == "e":
+    elif auswahl == "4" or auswahl == "e":
         return 4
-    elif auswahl == 5 or auswahl == "f":
+    elif auswahl == "5" or auswahl == "f":
         return 5
     else:
-        pass
+        for i in range(len(inventarliste)):
+            if auswahl == inventarliste[i]:
+                print("Du verwendest " + inventarliste[i])
+                return inventarliste[i]
+            else:
+                pass
 ergebniss = entscheidung("Was kannst du", "Nichts", "Viel", "-", "Fußball", "Koks und Nutten")
-print(ergebniss)
 
-#Inventar
-inventarliste = []
 
-#gegenstand zuum Inventar hinzufügen
-def inventaradd(a):           #funktion mit parameter
-    inventarliste.append(a) #Parameter kommt in die Inventarliste
-
-inventaradd("Monatskarte")     #Argument Monatskarte wird als parameter der funktion inventar+ eigesetzt und kommt so in die liste
 
 
 
