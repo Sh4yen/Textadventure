@@ -58,9 +58,12 @@ def entscheidung(a,b,c,d,e,f):  #funktion Entscheidung. Parameter a = Text/Frage
 
 ergebniss = 1
 while ergebniss == 1 :
-    entscheidung("Hallo, um an bord zu kommen benötigen sie leider eine Karte haben sie eine? \n(Tipp: du kannst dinge aus deinem Inventar nutzen indem du ihren Namen schreibst.", "Nein Leider nicht.", "Wo bin ich hier?", "-", "-", "-")
-     if entscheidung == "Monatskarte":
+    ergebnissb = entscheidung("Hallo, um an bord zu kommen benötigen sie leider eine Karte haben sie eine? \n(Tipp: du kannst dinge aus deinem Inventar nutzen indem du ihren Namen schreibst.", "Nein Leider nicht.", "Wo bin ich hier?", "-", "-", "-")
+    
+    if ergebnissb == "Monatskarte":
         print("Toll")
+        ergebniss = 0
+        
    
     #Warum steht hier ergebnis = entscheidung 
     #wenn ich nicht das richtige eingebe komme ich trozdem weiter??!
@@ -96,17 +99,17 @@ for i in range(len(inventarliste)):
 name = input("Was ist dein Name: ")
 spiel = 1
 while spiel == 1 : 
-    e_name = input("Bist du sicher dass "+ name + " dein Name sein soll: ")
+    e_name = input("Bist du sicher dass "+ name + " dein Name sein soll, hört sich irgendwie merkwürdig an. ")
     if e_name == "Ja" :
         print ("Ok")
         spiel = 0
     elif e_name == "Nein" :
         name = input("Was soll dann dein Name sein?")
     else :
-        print("Antworte mit Ja oder Nein")
+        print("Antworte mir mit Ja oder Nein")
 
 #Reiseziel
-print("Hallo " +name+ " hertzlich wilkommen anbord des Schiffs Strix, gesponsort von der ASUS coopararation.\nIch sehe sie haben eine Monatskarte. Wohin soll es denn Gehen?")
+print("Ok ja passt. Hallo " +name+ " hertzlich wilkommen anbord des Schiffs Strix, gesponsort von der ASUS coopararation.\nIch sehe sie haben eine Monatskarte. Wohin soll es denn Gehen?")
 e_reiseziel = int (input("1. Kaliskya\n2. Kennedyland\n3. Neureihnstadt\n"))
 if e_reiseziel == 1:
     print("Na viel spaß. Ich hoffe sie haben sich was zu Essen mitgenommen? Ich hab gehört da solls wieder Wölfe geben.")
