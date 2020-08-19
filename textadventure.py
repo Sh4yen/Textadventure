@@ -17,7 +17,6 @@ inventaradd("lautsprecher")
 inventaradd("akten")
 inventaradd("steuererklärung")
 inventaradd("laptop")
-inventaradd("brief")
 inventaradd("flasche")
 
 
