@@ -7,10 +7,11 @@ inventarliste = []
 
 
 #gegenstand zuum Inventar hinzufügen
-def inventaradd(a):           #funktion mit parameter
-    inventarliste.append(a) #Parameter kommt in die Inventarliste
+def inventaradd(a):             #funktion mit parameter
+    inventarliste.append(a)     #Parameter kommt in die Inventarliste
+    print("--- " + a + " Wurde zu deinem Inventar hinzugefügt")
 
-inventaradd("Monatskarte")     #Argument Monatskarte wird als parameter der funktion inventar+ eigesetzt und kommt so in die liste
+inventaradd("Monatskarte")      #Argument Monatskarte wird als parameter der funktion inventaradd eigesetzt und kommt so in die liste
 
 
 def entscheidung(a,b,c,d,e,f):
