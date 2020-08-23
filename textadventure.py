@@ -1,5 +1,6 @@
 #Bibiloteken importieren
 from tkinter import * 
+from time import *
 
 #Entscheidungen
 #Inventar
@@ -14,8 +15,8 @@ def inventaradd(a):             #funktion mit parameter
 inventaradd("Monatskarte")      #Argument Monatskarte wird als parameter der funktion inventaradd eigesetzt und kommt so in die liste
 
 
-def entscheidung(a,b,c,d,e,f):
-    print(a)
+def entscheidung(Text,b,c,d,e,f):
+    print(Text)
     if b == "-":
         pass
     else: 
@@ -55,7 +56,6 @@ def entscheidung(a,b,c,d,e,f):
                 return inventarliste[i]
             else:
                 pass
-ergebniss = entscheidung("Was kannst du", "Nichts", "Viel", "-", "Fußball", "Koks und Nutten")
 
 
 
@@ -93,21 +93,46 @@ while spiel == 1 :
         print("Antworte mit Ja oder Nein")
 
 #Reiseziel
-print("Hallo " +name+ " hertzlich wilkommen anbord des Schiffs Strix, gesponsort von der ASUS coopararation.\nIch sehe sie haben eine Monatskarte. Wohin soll es denn Gehen?")
-e_reiseziel = int (input("1. Kaliskya\n2. Kennedyland\n3. Neureihnstadt\n"))
-if e_reiseziel == 1:
-    print("Na viel spaß. Ich hoffe sie haben sich was zu Essen mitgenommen? Ich hab gehört da solls wieder Wölfe geben.")
-elif e_reiseziel == 2:
-    print("Passen sie auf sich auf das soll raues Pflaster sein")
-elif e_reiseziel == 3:
-    print("""Oh ich glaube das können sie sich abschminken, auch bei den geschwindigkeiten von diesem alten Passagierschiff wird deren Hafen nicht fertig sein ehe sie da sind.
-Ich denke Kennedyland und Kaliskya sind ihre einzigen Optionen. Außer sie wollen abspringen?""")
-    e_reiseziel = int (input("1. Kaliskya\n2. Kennedyland"))
+
+
+
+e_reiseziel = entscheidung("Hallo " +name+ """ hertzlich wilkommen anbord des Schiffs Strix,gesponsort von der ASUS coopararation.
+Ich sehe sie haben eine Monatskarte. Wohin soll es denn Gehen?""",
+ "Kaliskya", "Kennedyland", "Neureihnstadt", "-", "-")
+
+
+
+if e_reiseziel == 3:
+    e_reiseziel = entscheidung("""Oh ich glaube das können sie sich abschminken, auch bei den geschwindigkeiten von diesem alten Passagierschiff 
+    wird deren Hafen nicht fertig sein ehe sie da sind. Ich denke Kennedyland und Kaliskya sind ihre einzigen Optionen. Außer sie wollen abspringen?"""
+    , "Kaliskya", "Kennedyland", "_", "-", "-")
     if e_reiseziel == 1 or e_reiseziel == 2 :
         print("Ok, setzen sie sich.")
     elif e_reiseziel == 3 :
         print("Alles klar, wenn sie meinen dass ise das hinbekommen...setzen sie sich doch.")
+        input("weiter")
+    print("Ich setzte mich und erblickte neben mir einen etwas dicklichen mann...")
+    input("weiter")
+    print("Hanns: Servus i bin da Hanns, san sie etwa aa auf am weg noch Neureihnstadt ")
+    input("weiter")
+    print(name, ": Ja bin ich")
+    input("weiter")
+    story1 = entscheidung("Hanns: des is doch schee do könna mia uns de ganze fahrt nett unterhoidn", "gehe in das essensabteil", 
+    "unterhalte dich mit Hans", "-", "-", "-")
+    input("weiter")
+
+
+
+elif e_reiseziel == 2:
+    print("Passen sie auf sich auf das soll raues Pflaster sein")
+
+
+elif e_reiseziel == 1:
+    print("Na viel spaß. Ich hoffe sie haben sich was zu Essen mitgenommen? Ich hab gehört da solls wieder Wölfe geben.")
 
 
 
 
+
+
+input("weiter")
