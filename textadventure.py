@@ -14,48 +14,65 @@ def inventaradd(a):             #funktion mit parameter
 inventaradd("Monatskarte")      #Argument Monatskarte wird als parameter der funktion inventaradd eigesetzt und kommt so in die liste
 
 
-def entscheidung(a,b,c,d,e,f):
-    print(a)
-    if b == "-":
+def entscheidung(Frage,Antwort1,Antwort2,Antwort3,Antwort4,Antwort5):  #funktion Entscheidung. Parameter a = Text/Frage. Parameter b,c,d,e,f = Antwortmöglichkeiten
+    print(Frage)
+    if  Antwort1 == "-":                #wenn für einen Parameter das Argument - (Bindestrich) gegeben wird, so wird dieser ignorirt
         pass
     else: 
-        print("1. ", b)
-    if c == "-":
+        print("1. ", Antwort1)
+    if Antwort2 == "-":
         pass
     else:
-        print("2. ", c)
-    if d == "-":
+        print("2. ", Antwort2)
+    if Antwort3 == "-":
         pass
     else:
-        print("3. ", d)
-    if e == "-":
+        print("3. ", Antwort3)
+    if Antwort4 == "-":
         pass
     else:
-        print("4. ", e)
-    if f == "-":
+        print("4. ", Antwort4)
+    if Antwort5 == "-":
         pass
     else:
-        print("5. ", f)
+        print("5. ", Antwort5)
     
     auswahl = str(input())
-    if auswahl == "1" or auswahl == "b":
+    if auswahl == "1":    #wenn 1 gewält wird gibt die funktion 1 aus u.s.w.
         return 1
-    elif auswahl == "2" or auswahl == "c":
+    elif auswahl == "2":
         return 2
-    elif auswahl == "3" or auswahl == "d":
+    elif auswahl == "3":
         return 3
-    elif auswahl == "4" or auswahl == "e":
+    elif auswahl == "4":
         return 4
-    elif auswahl == "5" or auswahl == "f":
+    elif auswahl == "5":
         return 5
     else:
-        for i in range(len(inventarliste)):
-            if auswahl == inventarliste[i]:
+        for i in range(len(inventarliste)): #eine Zahl i steht bei null und wiederholt die for funktion bis sie bei der länge der list angelangt, jedes mal wird sie um 1 addiert
+            if auswahl == inventarliste[i]: #stimmt das eingegebene wor mit einem Listenelement überein so wird der print befehl ausgeführt und die funktion gibt den Namen des elements aus
                 print("Du verwendest " + inventarliste[i])
                 return inventarliste[i]
             else:
-                pass
-ergebniss = entscheidung("Was kannst du", "Nichts", "Viel", "-", "Fußball", "Koks und Nutten")
+                return 0    #gibt die Funktion 6 aus wurde keine Valide eingabe gemacht
+
+
+ergebniss = 1
+while ergebniss == 1 :
+    ergebnissb = entscheidung("Hallo, um an bord zu kommen benötigen sie leider eine Karte haben sie eine? \n(Tipp: du kannst dinge aus deinem Inventar nutzen indem du ihren Namen schreibst.", "Nein Leider nicht.", "Wo bin ich hier?", "-", "-", "-")
+    
+    if ergebnissb == "Monatskarte":
+        print("Toll")
+        ergebniss = 0
+        
+   
+    #Warum steht hier ergebnis = entscheidung 
+    #wenn ich nicht das richtige eingebe komme ich trozdem weiter??!
+    #die funktion muss loopen wenn eine ungültige antwort gegeben wird.
+ 
+        
+    
+
 
 
 
@@ -83,17 +100,17 @@ for i in range(len(inventarliste)):
 name = input("Was ist dein Name: ")
 spiel = 1
 while spiel == 1 : 
-    e_name = input("Bist du sicher dass "+ name + " dein Name sein soll: ")
+    e_name = input("Bist du sicher dass "+ name + " dein Name sein soll, hört sich irgendwie merkwürdig an. ")
     if e_name == "Ja" :
         print ("Ok")
         spiel = 0
     elif e_name == "Nein" :
         name = input("Was soll dann dein Name sein?")
     else :
-        print("Antworte mit Ja oder Nein")
+        print("Antworte mir mit Ja oder Nein")
 
 #Reiseziel
-print("Hallo " +name+ " hertzlich wilkommen anbord des Schiffs Strix, gesponsort von der ASUS coopararation.\nIch sehe sie haben eine Monatskarte. Wohin soll es denn Gehen?")
+print("Ok ja passt. Hallo " +name+ " hertzlich wilkommen anbord des Schiffs Strix, gesponsort von der ASUS coopararation.\nIch sehe sie haben eine Monatskarte. Wohin soll es denn Gehen?")
 e_reiseziel = int (input("1. Kaliskya\n2. Kennedyland\n3. Neureihnstadt\n"))
 if e_reiseziel == 1:
     print("Na viel spaß. Ich hoffe sie haben sich was zu Essen mitgenommen? Ich hab gehört da solls wieder Wölfe geben.")
