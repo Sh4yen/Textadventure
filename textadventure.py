@@ -56,14 +56,20 @@ def entscheidung(Frage,Antwort1,Antwort2,Antwort3,Antwort4,Antwort5):  #funktion
             else:
                 return 0    #gibt die Funktion 6 aus wurde keine Valide eingabe gemacht
 
+print("Hallo")
 
-ergebniss = 1
-while ergebniss == 1 :
-    ergebnissb = entscheidung("Hallo, um an bord zu kommen benötigen sie leider eine Karte haben sie eine? \n(Tipp: du kannst dinge aus deinem Inventar nutzen indem du ihren Namen schreibst.", "Nein Leider nicht.", "Wo bin ich hier?", "-", "-", "-")
-    
-    if ergebnissb == "Monatskarte":
+clock = 0
+while clock == 0 :
+    clock = entscheidung("Um an bord zu kommen benötigen sie leider eine Karte, haben sie eine? \n(Tipp: du kannst dinge aus deinem Inventar nutzen indem du ihren Namen schreibst.)", "Nein Leider nicht.", "Wo bin ich hier?", "-", "-", "-")
+    if clock == 1 :
+        print("sorry ohne Karte oder MONATSKARTE kommst du hier leider nicht weiter. Also..." )
+        clock = 0
+    elif clock == 2 :
+        print("Ah einer von daen ganz schnellen bist du also. Hier nochmal langsam damit auch du es rallst...")
+        clock = 0
+    elif clock == "Monatskarte":
         print("Toll")
-        ergebniss = 0
+        clock = 1
         
    
     #Warum steht hier ergebnis = entscheidung 
