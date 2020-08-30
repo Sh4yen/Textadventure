@@ -13,39 +13,39 @@ def inventaradd(a):           #funktion mit parameter
 inventaradd("Monatskarte")     #Argument Monatskarte wird als parameter der funktion inventar+ eigesetzt und kommt so in die liste
 
 
-def entscheidung(a,b,c,d,e,f):  #funktion Entscheidung. Parameter a = Text/Frage. Parameter b,c,d,e,f = Antwortmöglichkeiten
-    print(a)
-    if b == "-":                #wenn für einen Parameter das Argument - (Bindestrich) gegeben wird, so wird dieser ignorirt
+def entscheidung(Frage,Antwort1,Antwort2,Antwort3,Antwort4,Antwort5):  #funktion Entscheidung. Parameter a = Text/Frage. Parameter b,c,d,e,f = Antwortmöglichkeiten
+    print(Frage)
+    if  Antwort1 == "-":                #wenn für einen Parameter das Argument - (Bindestrich) gegeben wird, so wird dieser ignorirt
         pass
     else: 
-        print("1. ", b)
-    if c == "-":
+        print("1. ", Antwort1)
+    if Antwort2 == "-":
         pass
     else:
-        print("2. ", c)
-    if d == "-":
+        print("2. ", Antwort2)
+    if Antwort3 == "-":
         pass
     else:
-        print("3. ", d)
-    if e == "-":
+        print("3. ", Antwort3)
+    if Antwort4 == "-":
         pass
     else:
-        print("4. ", e)
-    if f == "-":
+        print("4. ", Antwort4)
+    if Antwort5 == "-":
         pass
     else:
-        print("5. ", f)
+        print("5. ", Antwort5)
     
     auswahl = str(input())
-    if auswahl == "1" or auswahl == "b":    #wenn 1 gewält wird gibt die funktion 1 aus u.s.w.
+    if auswahl == "1":    #wenn 1 gewält wird gibt die funktion 1 aus u.s.w.
         return 1
-    elif auswahl == "2" or auswahl == "c":
+    elif auswahl == "2":
         return 2
-    elif auswahl == "3" or auswahl == "d":
+    elif auswahl == "3":
         return 3
-    elif auswahl == "4" or auswahl == "e":
+    elif auswahl == "4":
         return 4
-    elif auswahl == "5" or auswahl == "f":
+    elif auswahl == "5":
         return 5
     else:
         for i in range(len(inventarliste)): #eine Zahl i steht bei null und wiederholt die for funktion bis sie bei der länge der list angelangt, jedes mal wird sie um 1 addiert
