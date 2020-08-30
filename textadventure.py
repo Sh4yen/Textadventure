@@ -70,11 +70,6 @@ while clock == 0 :
     elif clock == "Monatskarte":
         print("Toll")
         clock = 1
-        
-   
-    #Warum steht hier ergebnis = entscheidung 
-    #wenn ich nicht das richtige eingebe komme ich trozdem weiter??!
-    #die funktion muss loopen wenn eine ungültige antwort gegeben wird.
  
         
     
@@ -131,6 +126,11 @@ Ich denke Kennedyland und Kaliskya sind ihre einzigen Optionen. Außer sie wolle
     elif e_reiseziel == 3 :
         print("Alles klar, wenn sie meinen dass ise das hinbekommen...setzen sie sich doch.")
 
-
-
-
+#Raum beschreibung
+print("------------------------------------------------------------------------------------")
+input("Der Kontrolleur lässt dich durch und du betrittst das Schiff. Du warst der letzte in der Schlange.")
+input("Vor dir ligt ein kurtzer Gang, du gehst hinunter. Die Schwere tür hinter dir Schliest sich. \n Du kannst in der Dunkelheit des Ganges kaum sehen. Nur sehr dimme Blaue Lichter im boden weisen dir jetzt noch die richtung.")
+input("Vor dir öffnet sich eine eben so große und schwere Tür wie die erste. Sie schwingt langsam nach außen auf. Ein Warmes licht scheint dir entgegen, du hörst die Geräusche von konversationen. Nach kurzem Zögern betrittst du den Raum.")
+input("""Deine Sinne werden überflutet. Alles leuchtet alles ist gold. So viel gold hast du in deinem Leben noch nicht gesehen, jetzt wo du drüber nachdenkst hast du vermutlich noch nie echtes Gold gesehen. Aber dieses Gold ist echt, sehr echt.
+ \nUnd nicht nur das Gold, auf den drei Innendecks welch du sehen kannst sind etwa 200 Menschen verteilt, freudig in unterhaltungen vertieft, tragen sie alle zusammen mehr Juwelen an ihren Körpern als ein ganzer Königshof in bestiz hat.
+ \nWobei es auch nicht unwarscheinlich ist dass sich hier multible von solchen aufhalten.""")
