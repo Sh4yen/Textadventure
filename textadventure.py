@@ -54,7 +54,7 @@ def entscheidung(Frage,Antwort1,Antwort2,Antwort3,Antwort4,Antwort5):  #funktion
                 print("Du verwendest " + inventarliste[i])
                 return inventarliste[i]
             else:
-                return 0    #gibt die Funktion 6 aus wurde keine Valide eingabe gemacht
+                return 0    #gibt die Funktion 0 aus wurde keine Valide eingabe gemacht
 
 print("Hallo")
 
