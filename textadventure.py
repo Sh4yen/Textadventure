@@ -1,6 +1,4 @@
 #Bibiloteken importieren
-from tkinter import * 
-
 #Entscheidungen
 #Inventar
 inventarliste = []
